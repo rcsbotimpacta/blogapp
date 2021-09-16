@@ -1,0 +1,24 @@
+<h2>Lista de categorias: </h2>
+<hr>
+<a href="/admin/categorias/add"><button class="btn btn-success">Nova Categoria</button></a>
+
+{{!-- Each para aparecer a Listagem de categorias na pagina --}}
+{{#each categorias}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{this.nome}}</h4>
+            <small>Slug: {{this.slug}}</small><br>
+            <small>Data de criação: {{this.date}}</small> <br>
+            <a href="/admin/categorias/edit/{{this._id}}"><button class="btn btn-success mt-3">Editar categoria</button></a>  {{!-- botao criado para ediçao cattegoria  --}}
+                  {{!-- Confifurando o form para deletar a categoria --}}
+            <form action="/admin/categorias/deletar" method="POST"> {{!!-- mencionar a action desse form, ou seja, mencionar a rota que foi criada para deletar categorias no admin.js--}}
+                <input type="hidden" name="id" value="{{this._id}}">
+                <button type="submit" class="btn btn-danger mt-1">Deletar categoria</button>
+            </form>
+        </div>
+    </div>
+{{else}}
+    <h4 class="mt-3">Nenhuma categoria registrada!</h4>
+    {{!-- aparecera a msg acima quando nao tiver nennhuma categoria listada na pagina--}}
+{{/each}}
+
