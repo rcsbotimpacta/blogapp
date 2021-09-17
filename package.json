@@ -1,0 +1,33 @@
+{
+  "name": "blogapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "mongoose": "^6.0.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "express-handlebars": "^5.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcsbotimpacta/blogapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rcsbotimpacta/blogapp/issues"
+  },
+  "homepage": "https://github.com/rcsbotimpacta/blogapp#readme"
+}
